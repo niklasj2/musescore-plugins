@@ -4,9 +4,10 @@ A collection of QML plugins for MuseScore Studio 4.x.
 
 ## Plugins
 
-- [`dotted-eighth-to-eighths`](plugins/dotted-eighth-to-eighths/) — rewrites
-  every dotted eighth + sixteenth note pair into two straight eighth notes,
-  within the selection or across the whole score.
+- [`swing-rhythm-converter`](plugins/swing-rhythm-converter/) — converts
+  quarter-beat rhythms between straight eighths, dotted eighth+sixteenth,
+  and triplet swing, within the selection or across the whole score.
+  **(Beta - see the plugin's own README for known limitations.)**
 
 ## Structure
 
@@ -14,8 +15,8 @@ A collection of QML plugins for MuseScore Studio 4.x.
 musescore-plugins/
 ├── README.md
 └── plugins/
-    └── dotted-eighth-to-eighths/
-        ├── RewriteDottedEighthSixteenth.qml
+    └── swing-rhythm-converter/
+        ├── SwingRhythmConverter.qml
         └── README.md
 ```
 
