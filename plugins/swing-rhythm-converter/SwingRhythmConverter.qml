@@ -6,9 +6,9 @@ import MuseScore 3.0
 
 MuseScore {
     id: root
-    version: "2.0"
-    description: "Converts quarter-beat rhythms (straight eighths, dotted eighth+sixteenth, or triplet swing) into whichever of the three you choose, within the selection or across the whole score if nothing is selected."
-    title: "Swing Rhythm Converter: Straight / Dotted / Triplet"
+    version: "1.0"
+    description: "Swing Rhythm Converter: Straight / Dotted / Triplet. Converts quarter-beat rhythms (straight eighths, dotted eighth+sixteenth, or triplet swing) into whichever of the three you choose, within the selection or across the whole score if nothing is selected."
+    title: "Swing Rhythm Converter"
     categoryCode: "composing-arranging-tools"
     requiresScore: true
     pluginType: "dialog"
@@ -328,6 +328,16 @@ MuseScore {
         console.log("Done. Number of pairs rewritten: " + replaced);
 
         } finally {
+            curScore.endCmd();
+        }
+
+        // Restore the original selection, since running the plugin otherwise leaves
+        // the selection wherever the last write operation happened to land it - which
+        // makes it awkward to immediately re-run the plugin with a different target
+        // over the same region.
+        if (!fullScore) {
+            curScore.startCmd();
+            curScore.selection.selectRange(startTick, endTick, startStaff, endStaff + 1);
             curScore.endCmd();
         }
     }

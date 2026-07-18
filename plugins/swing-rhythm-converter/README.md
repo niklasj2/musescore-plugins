@@ -1,9 +1,4 @@
-# Swing Rhythm Converter: Straight / Dotted / Triplet
-
-> **Status: beta.** Core conversions have been tested and work as intended,
-> but this hasn't yet been exercised across a wide range of real scores.
-> See "Known limitations" below before relying on it for anything important
-> - always keep a backup or use MuseScore's undo (Ctrl+Z) after running it.
+# Swing Rhythm Converter
 
 A MuseScore Studio 4.x QML plugin that converts quarter-beat rhythms
 between three interpretations:
@@ -23,7 +18,8 @@ the target pattern are left untouched.
 1. Copy `SwingRhythmConverter.qml` into your MuseScore Plugins folder
    (e.g. `Documents/MuseScore4/Plugins/`).
 2. In MuseScore Studio, open **Plugins → Plugin Manager** and enable
-   "Swing Rhythm Converter: Straight / Dotted / Triplet".
+   "Swing Rhythm Converter" (its full description mentions "Straight /
+   Dotted / Triplet").
 3. Select a region (or select nothing to process the whole score), run
    the plugin, and choose the target pattern in the dialog.
 
@@ -36,7 +32,7 @@ the target pattern are left untouched.
   between them is a deliberate reinterpretation of the rhythm, not a
   neutral rewrite.
 
-## Known limitations (beta)
+## Known limitations
 
 - **Chords (multiple pitches at once):** the core logic supports them, but
   they've had far less testing than single-note melodic lines. If you use

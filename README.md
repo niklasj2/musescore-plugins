@@ -4,10 +4,10 @@ A collection of QML plugins for MuseScore Studio 4.x.
 
 ## Plugins
 
-- [`swing-rhythm-converter`](plugins/swing-rhythm-converter/) — converts
-  quarter-beat rhythms between straight eighths, dotted eighth+sixteenth,
-  and triplet swing, within the selection or across the whole score.
-  **(Beta - see the plugin's own README for known limitations.)**
+- [`swing-rhythm-converter`](plugins/swing-rhythm-converter/) — "Swing
+  Rhythm Converter", which converts quarter-beat rhythms between straight
+  eighths, dotted eighth+sixteenth, and triplet swing, within the
+  selection or across the whole score.
 
 ## Structure
 
